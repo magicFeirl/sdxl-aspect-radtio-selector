@@ -44,7 +44,7 @@ class AspectRatioSelectorScript(scripts.Script):
 
     def ui(self, is_img2img):
         def handle_ar_select(radio):
-            w, h = radio.split("*")
+            w, h = list(map(int, radio.split("*")))
 
             return (w, h)
 
